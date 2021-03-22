@@ -10,3 +10,10 @@ var containsDuplicate = function (nums) {
     let myset = new Set(nums);
     return myset.size !== nums.length;
 };
+
+
+// one line solution
+var containsDuplicate = function (nums) {
+    // push to set and compare set size to array length
+    return new Set(nums).size !== nums.length;
+};
