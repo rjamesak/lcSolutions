@@ -4,6 +4,8 @@
  * param {number[][]} accounts
  * return {number}
  */
+
+// first accepted solution
 var maximumWealth = function (accounts) {
     let max = 0;
     // find the array with the max sum
