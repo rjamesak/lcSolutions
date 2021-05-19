@@ -25,5 +25,3 @@ function travelGrid(r, c, memo = {}) {
     }
     return memo[key]
 }
-
-let result = travelGrid(3, 2)
