@@ -30,4 +30,23 @@ var reverseString = function (s) {
     }
 }
 
+// recursive https://leetcode.com/explore/learn/card/recursion-i/250/principle-of-recursion/1440/
+
+var reverseString = function (s) {
+    // divide and conquer
+    // swap the first and last
+    swap(s, 0, s.length - 1)
+
+    function swap(s, front, back) {
+        if (front >= back) {
+            return
+        }
+        else {
+            [s[front], s[back]] = [s[back], s[front]]
+            return swap(s, front + 1, back - 1)
+        }
+
+    }
+}
+
 
