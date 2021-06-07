@@ -48,12 +48,12 @@ var reverseList = function(head) {
 
     // recursive helper function
     function helper(curNode, nextNode) {
+        // base case, last node
         if(nextNode == null){
             head = curNode
             return
         }
         else {
-            
             // grab the next node
             let newNextNode = nextNode.next
             // point curNode to prev
