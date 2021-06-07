@@ -26,7 +26,6 @@ var swapPairs = function(head) {
         head.next = newHead.next
         newHead.next = head
         head = newHead
-        console.log(head)
         head.next.next = swapPairs(head.next.next)
     }
     return head
