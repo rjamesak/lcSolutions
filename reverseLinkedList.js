@@ -25,3 +25,43 @@ var reverseList = function (head) {
     return prev;
 
 };
+
+
+// RECURSIVE IMPLEMENTATION
+// recursive implementation from the recursive exploration:
+// https://leetcode.com/explore/learn/card/recursion-i/251/scenario-i-recurrence-relation/2378/
+
+var reverseList = function(head) {
+    // recursive solution
+    // point first head to null, then recursive calls
+    // base case: if head.next == null, then this is the new head
+    // init call
+    if(head === null || head.next === null) {
+        return head
+    }
+    let nextNode = new ListNode()
+    nextNode = head.next
+    head.next = null
+    // send it to the helper 
+    helper(head, nextNode)
+    return head
+
+    // recursive helper function
+    function helper(curNode, nextNode) {
+        if(nextNode == null){
+            head = curNode
+            return
+        }
+        else {
+            
+            // grab the next node
+            let newNextNode = nextNode.next
+            // point curNode to prev
+            nextNode.next = curNode
+            // call helper on curNode, nextNode
+            helper(nextNode, newNextNode)
+
+        }
+    }
+    
+};
