@@ -49,7 +49,7 @@ function helper(row, col, memo={}) {
         return memo[symmetricalSide]
     }
     else{
-        // fill the memo
+        // fill the memo, don't forget to add memo to recursive calls
         memo[rcString] = helper(row - 1, col - 1, memo) + helper(row - 1, col, memo)
         // fill the value of the oppo side of triangle
         if(symmetricalSide !== "") {
