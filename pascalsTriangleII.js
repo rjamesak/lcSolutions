@@ -27,6 +27,7 @@ var getRow = function(rowIndex) {
         rowVals.push(cellValue)
     }
     return rowVals
+}
 
 
     // helper function to calc values of row, col
@@ -59,4 +60,3 @@ function helper(row, col, memo={}) {
         return memo[rcString]
     }
 }
-    
