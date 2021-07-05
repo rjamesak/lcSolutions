@@ -37,12 +37,15 @@ var reverseString = function (s) {
     // swap the first and last
     swap(s, 0, s.length - 1)
 
-    function swap(s, front, back) {
+    // helper function
+    function swap(s, front, back) { // string, front ptr, back ptr
         if (front >= back) {
             return
         }
         else {
+            // swap
             [s[front], s[back]] = [s[back], s[front]]
+            // recursive call to swap
             return swap(s, front + 1, back - 1)
         }
 
